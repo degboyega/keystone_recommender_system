@@ -11,6 +11,6 @@ class DataLoader:
 
     def preprocess(self, data):
         """Preprocess the data for recommendation."""
-        data['Transaction Date'] = pd.to_datetime(data['Transaction Date'])
-        data = data.sort_values(by=['Customer ID', 'Transaction Date'])
+        data['transaction_date'] = pd.to_datetime(data['transaction_date'])
+        data = data.sort_values(by=['customer_id', 'transaction Date'])
         return data
